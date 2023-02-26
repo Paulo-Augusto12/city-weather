@@ -63,6 +63,12 @@ export function HomePage() {
                   hook.setCity(e.target.value);
                 }}
                 label="Digite uma cidade"
+                onKeyDown={async (e) => {
+                  if (e.key === "Enter") {
+                    await hook.getAllData();
+                    hook.setCity("");
+                  }
+                }}
               />
               <Button
                 sx={{
