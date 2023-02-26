@@ -6,8 +6,6 @@ async function getWeatherData(lat: number, lon: number) {
     const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`;
 
     const response = await axios.get(api);
-
-    console.log(response.data);
     return response.data;
   } catch (err) {
     console.log("Erro", err);

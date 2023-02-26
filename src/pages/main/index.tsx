@@ -5,6 +5,7 @@ import { CiSearch } from "react-icons/ci";
 import { TiWeatherSunny } from "react-icons/ti";
 import { weatherIconData } from "../../api/iconData";
 import { WeatherCard } from "../../components/weatherCard";
+import { MdRunningWithErrors } from "react-icons/md";
 export function HomePage() {
   const hook = useHomePage();
   const icons = weatherIconData.map((data) => data.iconElement);
@@ -129,17 +130,23 @@ export function HomePage() {
                       </div>
                       <WeatherCard
                         cardDisplayData="Temperatura Atual"
-                        cardReceivedData={hook.cityWeatherData.main.temp}
+                        cardReceivedData={Math.round(
+                          hook.cityWeatherData.main.temp
+                        )}
                         temp
                       />
                       <WeatherCard
                         cardDisplayData="Temperatura Mínima"
-                        cardReceivedData={hook.cityWeatherData.main.temp_min}
+                        cardReceivedData={Math.round(
+                          hook.cityWeatherData.main.temp_min
+                        )}
                         temp
                       />
                       <WeatherCard
                         cardDisplayData="Temperatura Máxima"
-                        cardReceivedData={hook.cityWeatherData.main.temp_max}
+                        cardReceivedData={Math.round(
+                          hook.cityWeatherData.main.temp_max
+                        )}
                         temp
                       />
                       <WeatherCard
