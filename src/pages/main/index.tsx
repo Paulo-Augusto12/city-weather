@@ -23,9 +23,17 @@ export function HomePage() {
             pt: 6,
           }}
         >
-          <Typography variant="h6" sx={{ color: "#495057", fontWeight: 700 }}>
-            Procure por informações do clima da cidade que quiser !
-          </Typography>
+          <Box
+            sx={{
+              width: "100%",
+              display: { xs: "none", sm: "flex", md: "flex" },
+              justifyContent: "center",
+            }}
+          >
+            <Typography variant="h6" sx={{ color: "#495057", fontWeight: 700 }}>
+              Procure por informações do clima da cidade que quiser !
+            </Typography>
+          </Box>
           <Box
             sx={{
               display: "flex",
@@ -33,7 +41,7 @@ export function HomePage() {
               flexDirection: "column",
               gap: "1rem",
               height: hook.cityWeatherData?.weather.length ? "" : "80vh",
-              width: "55%",
+              width: { xs: "90%", sm: "90%", md: "90%" },
               backgroundColor: "#F8F9FA",
               borderRadius: "15px",
               padding: hook.cityWeatherData?.weather.length ? "2rem" : "",
@@ -43,11 +51,16 @@ export function HomePage() {
               sx={{
                 pt: "4rem",
                 display: "flex",
-                flexDirection: "row",
-                gap: "1rem",
+                flexDirection: { xs: "column", sm: "row", md: "row" },
+                gap: { xs: "4rem", sm: "2rem", md: "2rem", lg: '2rem' },
                 width: "90%",
               }}
             >
+              <Box
+                sx={{ display: { xs: "flex", sm: "none", md: "none" } }}
+              >
+                <Typography textAlign={'center'}>Procure por informações de clima da cidade que quiser</Typography>
+              </Box>
               <TextField
                 sx={{
                   input: {
