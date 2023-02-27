@@ -52,14 +52,14 @@ export function HomePage() {
                 pt: "4rem",
                 display: "flex",
                 flexDirection: { xs: "column", sm: "row", md: "row" },
-                gap: { xs: "4rem", sm: "2rem", md: "2rem", lg: '2rem' },
+                gap: { xs: "4rem", sm: "2rem", md: "2rem", lg: "2rem" },
                 width: "90%",
               }}
             >
-              <Box
-                sx={{ display: { xs: "flex", sm: "none", md: "none" } }}
-              >
-                <Typography textAlign={'center'}>Procure por informações de clima da cidade que quiser</Typography>
+              <Box sx={{ display: { xs: "flex", sm: "none", md: "none" } }}>
+                <Typography textAlign={"center"}>
+                  Procure por informações de clima da cidade que quiser
+                </Typography>
               </Box>
               <TextField
                 sx={{
