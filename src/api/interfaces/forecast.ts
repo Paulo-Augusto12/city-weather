@@ -4,7 +4,6 @@ export interface IForecastResponse {
       dayTime: string;
       main: {
         temp: string;
-        
       };
       weather: {};
     }

@@ -45,6 +45,6 @@ export function useHomePage() {
     cityData,
     cityWeatherData,
     getAllData,
-    cityForecastData
+    cityForecastData,
   };
 }
