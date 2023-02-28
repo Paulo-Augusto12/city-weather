@@ -1,9 +1,9 @@
 import axios from "axios";
-import { key } from "../api/apikey";
+import { VITE_APP_API_KEY } from "../api/apikey";
 
 export async function getForecastWeatherData(lat: number, lon: number) {
   try {
-    const baseURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${key}`;
+    const baseURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${VITE_APP_API_KEY}`;
     const response = await axios.get(baseURL);
 
     console.log(response.data);
