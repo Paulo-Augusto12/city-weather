@@ -17,7 +17,8 @@ export function WeatherCard({
         sx={{
           display: "flex",
           flexDirection: { xs: "column", sm: "column", md: "row" },
-          justifyContent: "space-between",
+          justifyContent: {xs: 'center', sm: 'center', md:"space-between" },
+          alignItems: {xs: 'center', sm: 'center', md:""}
         }}
       >
         <Typography variant="h6" sx={{ color: "#495057" }}>
