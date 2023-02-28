@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "env-cmd -f ./.env vite",
-    "build": "env-cmd -f ./.env tsc && vite build",
+    "dev": "vite",
+    "build": "tsc && vite build",
     "preview": "vite preview",
     "format": "prettier --write src"
   },
